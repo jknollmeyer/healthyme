@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="angular-ui-router.min.js"></script>
+    <script src="app.js"></script>
+    </script>
+
+ </head>
+
+ <body ng-app="RCapp">
+    <div ng-controller="qCtrl">
+    <form novalidate class="simple-form">
+        Gender: <input type="radio" ng-model="user.gender" value="male"/>male
+        <input type="radio" ng-model="user.gender" value="female"/>  <br>
+        <input type="button" ng-click="update(user)" value="Submit"/>
+
+  </div>
+ </body>
+ </html>
