@@ -1,20 +1,22 @@
 <!DOCTYPE html>
-<html ng-app>
+<html>
 <head>
     <title>HELLOOOOO</title>
     <meta name="viewport"
     content="width=device-width, initial-scale=1">
 
     <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.js"></script>
-    <script type="text/javascript" src="js/angular.js"></script>
+    <script src="js/bootstrap.js" type="text/javascript"></script>
+    <script src="js/angular.js" type="text/javascript"></script>
+    <script src="js/angular-ui-router.min.js"></script>
+    <script src="app.js"></script>
 
     <link href="css/bootstrap.css"
           rel="stylesheet" type="text/css">
     <link href="css/stylesheet.css"
           rel="stylesheet" type="text/css">
 </head>
-<body>
+<body ng-app="RCapp">
   <div class="item" style="background: url(img/heartbeat.jpg) no-repeat center center; background-size: cover;">
     <div class="container"><br><br><br><br><br>
       <div class="page-header">
@@ -30,6 +32,13 @@
       <input type="text" ng-model="sometext" />
 
       <h1>Hello {{ sometext }}</h1>
+    </div>
+    <div ng-controller="qCtrl">
+      <form novalidate class="simple-form">
+          Gender: <input type="radio" ng-model="user.gender" value="male"/>male
+          <input type="radio" ng-model="user.gender" value="female"/>female  <br>
+          <input type="button" ng-click="update(user)" value="Submit"/>
+        </form>
     </div>
   </div>
 </body>

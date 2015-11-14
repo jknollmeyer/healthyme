@@ -6,9 +6,7 @@ app.controller('qCtrl', ["$scope", function($scope){
 
   $scope.update = function(user){
     $scope.master = angular.copy(user);
-  }
-
-  $scope.reset();
+  };
 
 }]);
 
@@ -27,6 +25,5 @@ $urlRouterProvider.otherwise('/index');
   {
     url:'/results',
     templateUrl:'results.html'
-  })
+  });
 });
-
