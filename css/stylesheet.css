@@ -1,2 +1,11 @@
 /*make the background extend full page */
-html,body {height:100%; background-color: black; color: white}
+html,body {height:100%; background-color: black;}
+p{
+  color: white;
+  font-family: helvetica;
+}
+
+span{
+  color: white;
+  font-family: helvetica;
+}
