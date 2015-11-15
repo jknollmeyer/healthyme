@@ -1,12 +1,20 @@
 var app = angular.module('RCapp', [
   'ui.router']);
 
-app.controller('qCtrl', ["$scope", function($scope){
+app.controller('qCtrl', ["$scope", "$state", function($scope, $state) {
   $scope.master = {};
 
-  $scope.update = function(user){
+  $scope.update = function(user) {
     $scope.master = angular.copy(user);
+    $state.go('results');
+    $scope.data.risks = ["foo", "bar", "etc"];
   };
+
+  $scope.reset = function() {
+    $scope.user = angular.copy($scope.master);
+  };
+
+  $scope.reset();
 
 }]);
 
@@ -14,7 +22,11 @@ app.config(function($stateProvider, $urlRouterProvider){
 
 $urlRouterProvider.otherwise('/');
   $stateProvider
-
+  .state('default',
+  {
+    url:'/',
+    templateUrl:'partial_views/default.html'
+  })
   .state('questions',
   {
     url:'/questions',

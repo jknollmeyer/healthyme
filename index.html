@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="RCapp">
 <head>
     <title>HELLOOOOO</title>
     <meta name="viewport"
@@ -16,7 +16,7 @@
     <link href="css/stylesheet.css"
           rel="stylesheet" type="text/css">
 </head>
-<body ng-app="RCapp">
+<body ng-controller="qCtrl">
   <div class="item" style="background: url(img/heartbeat.jpg) no-repeat center center; background-size: cover;">
     <div class="container"><br><br><br><br><br>
       <div class="page-header">
@@ -26,20 +26,8 @@
     <br><br>
   </div>
 
-
   <div class="container">
     <div ui-view></div>
-    <button type="button" class="btn btn-default"
-     ui-sref="questions">Questions</button>
-     <button type="button" class="btn btn-default"
-      ui-sref="results">Results</button>
-<!--    <div ng-controller="qCtrl">
-      <form novalidate class="simple-form">
-          Gender: <input type="radio" ng-model="user.gender" value="male"/>male
-          <input type="radio" ng-model="user.gender" value="female"/>female  <br>
-          <input type="button" ng-click="update(user)" value="Submit"/>
-        </form>
-    </div>-->
   </div>
 </body>
 </html>
