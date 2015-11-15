@@ -12,18 +12,18 @@ app.controller('qCtrl', ["$scope", function($scope){
 
 app.config(function($stateProvider, $urlRouterProvider){
 
-$urlRouterProvider.otherwise('/index');
+$urlRouterProvider.otherwise('/');
   $stateProvider
 
   .state('questions',
   {
-    url:'/index',
-    templateUrl:'index.html'
+    url:'/questions',
+    templateUrl:'partial_views/question_form.html'
   })
 
   .state('results',
   {
     url:'/results',
-    templateUrl:'results.html'
+    templateUrl:'partial_views/results.html'
   });
 });
