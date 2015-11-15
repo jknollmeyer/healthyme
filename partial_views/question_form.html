@@ -6,26 +6,22 @@
               <input type="radio" ng-model="user.gender"
                      value="female"/> female
     <br><br></p>
+    
+    <span> Age: </span> <input type="number" ng-model="user.age"/>
     <span>Weight: </span> <input type="number"
                                  ng-model="user.weight"/>
     <br><br>
     <span>Height: </span><input type="number"
                                 ng-model="user.height"/>
     <br><br>
-    <p>Do you smoke?  <input type="radio" value="yes"
-                             ng-model="user.smoke"> yes
-                      <input type="radio" value="no"
-                             ng-model="user.smoke"> no
+    <p>How many cigarette packs do you smoke a day?  <input type="number" ng-model="user.smoke"/>
+                            
     <br><br></p>
     <p>Do you drink?<input type="radio" value ="yes"
                            ng-model="user.drink"> yes
                     <input type="radio" value="no"
                            ng-model="user.drink"> no
                            <br><br></p>
-    <p>Do you or anyone in your family a history of depression or anxiety? <input type="radio" value="yes"
-                                  ng-model="user.emo"> yes
-                           <input type="radio" value="no"
-                                  ng-model="user.emo"> no
     <br><br></p>
     <input type="button" ng-click="update(user)" value="Submit"/>
   </form><br><br><br><br><br><br><br>
