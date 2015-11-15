@@ -3,11 +3,10 @@ var app = angular.module('RCapp', [
 
 app.controller('qCtrl', ["$scope", "$state", function($scope, $state) {
   $scope.master = {};
-
+  $scope.risks = ["Heart Disease", "Cancer", "Swag Overdose"];
   $scope.update = function(user) {
     $scope.master = angular.copy(user);
     $state.go('results');
-    $scope.data.risks = ["foo", "bar", "etc"];
   };
 
   $scope.reset = function() {
